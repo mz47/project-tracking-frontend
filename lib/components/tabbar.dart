@@ -6,9 +6,9 @@ class ProjectTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 80,
       child: BottomAppBar(
-        color: Colors.lightBlue,
+        elevation: 1,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -19,7 +19,6 @@ class ProjectTabBar extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.home),
               onPressed: () => {debugPrint("Clicked")},
-              color: Colors.white,
             ),
             IconButton(
               icon: Icon(Icons.settings),

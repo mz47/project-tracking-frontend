@@ -14,16 +14,47 @@ class DetailsView extends StatelessWidget {
             style: TextStyle(fontSize: 25),
           ),
         ),
-        body: Stack(
+        body: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(20),
-              child: Text(
-                "Bauvorhaben: " + project.bauvorhaben,
-                style: TextStyle(fontSize: 20, color: Colors.grey),
-              ),
-            )
+            Column(
+              children: <Widget>[
+                bubble,
+                bubble,
+              ],
+            ),
+            bigbubble,
           ],
         ));
   }
+
+  static Widget bubble = Card(
+    margin: EdgeInsets.all(20),
+    elevation: 2,
+    child: Container(
+      height: 200,
+      width: 200,
+      child: Center(
+        child: Text(
+          "26%",
+          style: TextStyle(fontSize: 40),
+        ),
+      ),
+    ),
+  );
+
+  static Widget bigbubble = Card(
+    margin: EdgeInsets.all(20),
+    elevation: 2,
+    child: Container(
+      height: 440,
+      width: 800,
+      child: Center(
+        child: Text(
+          "26%",
+          style: TextStyle(fontSize: 40),
+        ),
+      ),
+    ),
+  );
 }
